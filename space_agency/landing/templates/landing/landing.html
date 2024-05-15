@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'landing/css/landing.css' %}" rel="stylesheet"/>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>{{title}}</title>
+</head>
+<body>
+<!-------navbar------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid justify-content-around">
+    <a class="navbar-brand text-danger fs-2 order-lg-1 order-2 ms-lg-5" href="#" style="font-family: SpaceBold">NASA</a>
+    <button class="navbar-toggler order-lg-2 order-1 btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="togl-icon"><span></span><span></span><span></span></div>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+      <ul class="navbar-nav text-center justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active fw-bold text-center" aria-current="page" href="#">Преимущества</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" aria-current="page" href="#">Фотографии</a>
+        </li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-danger order-lg-3 order-3 me-lg-5">Вход</button>
+  </div>
+</nav>
+
