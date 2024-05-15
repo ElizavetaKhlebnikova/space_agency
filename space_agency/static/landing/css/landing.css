@@ -1,0 +1,77 @@
+@font-face {
+  font-family: SpaceBold;
+  src: url("../../fonts/space-bold.otf") format("opentype");
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.togl-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.togl-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  background: red;
+}
+
+.togl-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.togl-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.togl-icon span:nth-child(3) {
+  top: 20px;
+}
+
+.about-us {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.agency-title {
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+.agency-text {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.images-row {
+  margin-bottom: 30px;
+}
+
+.images-card {
+  padding: 30px;
+}
+
+.images-text {
+  font-size: 14px;
+  font-weight: 600px;
+}
+
+.images-img {
+  height: 457px;
+  width: 457px;
+  border-radius: 50px;
+}
+
+svg {
+  margin-bottom: 30px;
+}
