@@ -67,9 +67,13 @@ body {
 }
 
 .images-img {
-  height: 457px;
   width: 457px;
+  height: 457px;
   border-radius: 50px;
+  background-image: url("../../img/space.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 svg {
