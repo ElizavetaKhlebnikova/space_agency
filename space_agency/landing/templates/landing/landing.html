@@ -11,6 +11,7 @@
     <link href="{% static 'landing/css/landing.css' %}" rel="stylesheet" />
     <link href="{% static 'slick/slick.css' %}" rel="stylesheet" />
     <link href="{% static 'slick/slick-theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'lightbox/css/lightbox.css' %}" rel="stylesheet" />
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -232,5 +233,172 @@
         </div>
       </div>
     </div>
+
+    <div class="slider-section">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="slider-title">Фотографии</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="sliders">
+          <div class="slider-for" style="margin-bottom: 45px">
+            <div class="slider-for-image">
+              <a
+                href="../../../static/img/space.jpg"
+                data-lightbox="mygallery"
+              >
+                <div
+                  class="image-for"
+                  style="background-image: url('/static/img/space.jpg')"
+                ></div>
+              </a>
+            </div>
+            <div class="slider-for-image">
+              <a
+                href="../../../static/img/space1.jpg"
+                data-lightbox="mygallery"
+              >
+                <div
+                  class="image-for"
+                  style="background-image: url('/static/img/space1.jpg')"
+                ></div>
+              </a>
+            </div>
+            <div class="slider-for-image">
+              <a
+                href="../../../static/img/space2.jpg"
+                data-lightbox="mygallery"
+              >
+                <div
+                  class="image-for"
+                  style="background-image: url('/static/img/space2.jpg')"
+                ></div>
+              </a>
+            </div>
+            <div class="slider-for-image">
+              <a
+                href="../../../static/img/space3.jpg"
+                data-lightbox="mygallery"
+              >
+                <div
+                  class="image-for"
+                  style="background-image: url('/static/img/space3.jpg')"
+                ></div>
+              </a>
+            </div>
+            <div class="slider-for-image">
+              <a
+                href="../../../static/img/space4.jpg"
+                data-lightbox="mygallery"
+              >
+                <div
+                  class="image-for"
+                  style="background-image: url('/static/img/space4.jpg')"
+                ></div>
+              </a>
+            </div>
+            <div class="slider-for-image">
+              <a
+                href="../../../static/img/space5.jpg"
+                data-lightbox="mygallery"
+              >
+                <div
+                  class="image-for"
+                  style="background-image: url('/static/img/space5.jpg')"
+                ></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- madal-slider -->
+
+          <!-- madal-slider -->
+          <div class="slider-nav">
+            <div class="slider-nav-image">
+              <div
+                class="image"
+                style="background-image: url('/static/img/space.jpg')"
+              ></div>
+            </div>
+            <div class="slider-nav-image">
+              <div
+                class="image"
+                style="background-image: url('/static/img/space1.jpg')"
+              ></div>
+            </div>
+            <div class="slider-nav-image">
+              <div
+                class="image"
+                style="background-image: url('/static/img/space2.jpg')"
+              ></div>
+            </div>
+            <div class="slider-nav-image">
+              <div
+                class="image"
+                style="background-image: url('/static/img/space3.jpg')"
+              ></div>
+            </div>
+            <div class="slider-nav-image">
+              <div
+                class="image"
+                style="background-image: url('/static/img/space4.jpg')"
+              ></div>
+            </div>
+            <div class="slider-nav-image">
+              <div
+                class="image"
+                style="background-image: url('/static/img/space5.jpg')"
+              ></div>
+            </div>
+          </div>
+          <script
+            type="text/javascript"
+            src="//code.jquery.com/jquery-1.11.0.min.js"
+          ></script>
+          <script
+            type="text/javascript"
+            src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+          ></script>
+          <script src="{% static 'slick/slick.min.js' %}"></script>
+          <script type="text/javascript">
+            $(".slider-for").slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              enterMode: true,
+              fade: true,
+              asNavFor: ".slider-nav",
+            });
+            $(".slider-nav").slick({
+              slidesToShow: 5,
+              slidesToScroll: 1,
+              variableWidth: false,
+              asNavFor: ".slider-for",
+              dots: false,
+              centerPadding: "0",
+              centerMode: true,
+              focusOnSelect: true,
+              prevArrow:
+                "<img src='../../../static/img/arrow_prev.png' class='prev'>",
+              nextArrow:
+                "<img src='../../../static/img/arrow_next.png' class='next'>",
+              responsive: [
+                {
+                  breakpoint: 576,
+                  settings: {
+                    slidesToShow: 3,
+                    centerPadding: "50px",
+                    variableWidth: true,
+                    arrows: false,
+                  },
+                },
+              ],
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'lightbox/js/lightbox.js' %}"></script>
   </body>
 </html>
