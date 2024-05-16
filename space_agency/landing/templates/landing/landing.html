@@ -1,35 +1,236 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
-    <link href="{% static 'landing/css/landing.css' %}" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'landing/css/landing.css' %}" rel="stylesheet" />
+    <link href="{% static 'slick/slick.css' %}" rel="stylesheet" />
+    <link href="{% static 'slick/slick-theme.css' %}" rel="stylesheet" />
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>{{title}}</title>
-</head>
-<body>
-<!-------navbar------->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid justify-content-around">
-    <a class="navbar-brand text-danger fs-2 order-lg-1 order-2 ms-lg-5" href="#" style="font-family: SpaceBold">NASA</a>
-    <button class="navbar-toggler order-lg-2 order-1 btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="togl-icon"><span></span><span></span><span></span></div>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
-      <ul class="navbar-nav text-center justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active fw-bold text-center" aria-current="page" href="#">Преимущества</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active fw-bold" aria-current="page" href="#">Фотографии</a>
-        </li>
-      </ul>
-    </div>
-    <button type="button" class="btn btn-danger order-lg-3 order-3 me-lg-5">Вход</button>
-  </div>
-</nav>
+  </head>
+  <body>
+    <!-------navbar------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid justify-content-around">
+        <a
+          class="navbar-brand text-danger fs-2 order-lg-1 order-2 ms-lg-5"
+          href="#"
+          style="font-family: SpaceBold"
+          >NASA</a
+        >
+        <button
+          class="navbar-toggler order-lg-2 order-1 btn-outline-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="togl-icon"><span></span><span></span><span></span></div>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center order-lg-2"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav text-center justify-content-center">
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold text-center"
+                aria-current="page"
+                href="#"
+                >Преимущества</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="#"
+                >Фотографии</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-danger order-lg-3 order-3 me-lg-5">
+          Вход
+        </button>
+      </div>
+    </nav>
 
+    <!--info-->
+    <div class="container-lg about-agency info-about-nasa about-us">
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-7 col-md-12 col-sm-12 d-flex flex-column justify-content-center text-center"
+          style="margin-bottom: 90px"
+        >
+          <h1 class="agency-title fw-bold">Космическое агентство</h1>
+          <h5 class="agency-text fw-normal">
+            Национальное управление по аэронавтике и исследованию космического
+            пространства — ведомство, относящееся к федеральному правительству
+            США и подчиняющееся непосредственно президенту США.
+          </h5>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-12 col-md-12 col-sm-5 d-flex justify-content-around align-items-center images"
+        >
+          <div class="container">
+            <div class="row justify-content-around">
+              <div class="col-lg-6 col-md-12 justify-content-center">
+                <div class="row justify-content-center images-row">
+                  <div
+                    class="col-6 justify-content-center text-center images-card"
+                  >
+                    <svg
+                      width="65"
+                      height="65"
+                      viewBox="0 0 65 65"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_601_33)">
+                        <path
+                          d="M10.9 19.7C13.52 19.7 15.84 20.96 17.3 22.9H46.1C53.03 22.9 59.6 25.17 64.02 31.06C64.66 31.91 64.66 33.09 64.02 33.94C59.6 39.83 53.03 42.1 46.1 42.1H17.3C15.84 44.04 13.52 45.3 10.9 45.3H10.1V54.9H8.5C5.849 54.9 3.7 52.75 3.7 50.1V45.3H4.5C2.291 45.3 0.5 43.51 0.5 41.3V23.7C0.5 21.49 2.289 19.7 4.496 19.7H3.7V14.9C3.7 12.249 5.849 10.1 8.5 10.1H10.1V19.7H10.9ZM48.14 27.7C47.81 27.7 47.7 27.81 47.7 28.14V36.86C47.7 37.1 47.81 37.3 48.14 37.3C50.11 37.3 51.7 35.71 51.7 33.74V31.26C51.7 29.29 50.11 27.7 48.14 27.7Z"
+                          fill="#004382"
+                        />
+                        <path
+                          d="M13.3 54.9H13.41C17.56 54.9 21.54 53.71 25.02 51.71L35.7 45.3H13.3V54.9Z"
+                          fill="#B3B3B3"
+                        />
+                        <path
+                          d="M13.3 19.7H35.7L25.02 13.292C21.54 11.203 17.56 10.1 13.41 10.1H13.3V19.7Z"
+                          fill="#B3B3B3"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_601_33">
+                          <rect
+                            width="64"
+                            height="64"
+                            fill="white"
+                            transform="translate(0.5 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h5 class="images-text">
+                      Спейс шаттлы — пилотируемые корабли
+                    </h5>
+                  </div>
+                  <div
+                    class="col-6 justify-content-center text-center images-card"
+                  >
+                    <svg
+                      width="65"
+                      height="65"
+                      viewBox="0 0 65 65"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.945 31.75C13.6799 31.2908 13.2432 30.9556 12.731 30.8183C12.2189 30.6809 11.6731 30.7526 11.2138 31.0175L5 34.6012C4.41831 34.9346 3.91019 35.3824 3.5063 35.9176C3.1024 36.4527 2.81112 37.0642 2.65 37.715C2.33998 39.0055 2.54393 40.3659 3.21875 41.5087L3.76375 42.4512C4.42722 43.5985 5.51903 44.4354 6.79926 44.7781C8.07949 45.1208 9.44339 44.9412 10.5913 44.2787L16.8 40.7C17.0277 40.5688 17.2272 40.3941 17.3873 40.1857C17.5474 39.9774 17.6649 39.7395 17.733 39.4858C17.8012 39.232 17.8187 38.9673 17.7845 38.7068C17.7503 38.4463 17.6651 38.1951 17.5338 37.9675L13.945 31.75Z"
+                        fill="#B3B3B3"
+                      />
+                      <path
+                        d="M48.355 55.6L36.59 32.25C36.5614 32.193 36.5557 32.1271 36.574 32.066C36.5924 32.0049 36.6334 31.9531 36.6887 31.9213L37.7262 31.3225C37.9538 31.1912 38.1532 31.0164 38.3132 30.808C38.4732 30.5996 38.5905 30.3618 38.6586 30.108C38.7266 29.8543 38.7439 29.5896 38.7097 29.3291C38.6754 29.0687 38.5901 28.8175 38.4587 28.59L32.5175 18.2988C32.3863 18.0711 32.2115 17.8715 32.0032 17.7114C31.7949 17.5513 31.557 17.4339 31.3033 17.3657C31.0495 17.2976 30.7848 17.2801 30.5243 17.3143C30.2638 17.3485 30.0126 17.4337 29.785 17.565L18.9875 23.79C18.4175 24.1166 17.9179 24.553 17.5178 25.0739C17.1176 25.5949 16.8248 26.1901 16.6562 26.825C16.5416 27.2215 16.4839 27.6323 16.485 28.045C16.4925 28.995 17.635 30.8825 18.75 32.83C19.9487 34.9238 21.155 37.065 22.0425 37.5988C22.6075 37.9388 23.605 38.2113 24.4437 38.2113H24.5487L14.6337 59.6613C14.5233 59.8997 14.4609 60.1577 14.4502 60.4202C14.4394 60.6828 14.4806 60.945 14.5712 61.1917C14.6618 61.4384 14.8002 61.6648 14.9784 61.858C15.1566 62.0511 15.3711 62.2073 15.6097 62.3175C15.8483 62.4277 16.1063 62.4899 16.3689 62.5003C16.6315 62.5108 16.8936 62.4694 17.1402 62.3785C17.3868 62.2876 17.6131 62.149 17.8061 61.9706C17.9991 61.7922 18.155 61.5775 18.265 61.3388L29.975 36.0075C30.0611 35.82 30.2036 35.664 30.3825 35.5613L32.7837 34.1763C32.8132 34.1594 32.8459 34.1488 32.8796 34.1449C32.9134 34.1411 32.9475 34.1442 32.9801 34.154C33.0126 34.1639 33.0428 34.1802 33.0688 34.2021C33.0947 34.224 33.116 34.2509 33.1312 34.2813L44.7825 57.4063C44.9007 57.6408 45.0639 57.8498 45.2629 58.0213C45.4618 58.1928 45.6926 58.3234 45.9421 58.4057C46.1915 58.488 46.4547 58.5204 46.7167 58.501C46.9786 58.4815 47.2342 58.4107 47.4687 58.2925C47.7033 58.1743 47.9123 58.0111 48.0838 57.8121C48.2553 57.6132 48.3859 57.3824 48.4682 57.1329C48.5505 56.8835 48.5829 56.6203 48.5634 56.3583C48.544 56.0964 48.4732 55.8408 48.355 55.6063V55.6ZM61.7762 14.9675L56.0112 5.00003C55.3459 3.85445 54.2539 3.01903 52.9741 2.67655C51.6944 2.33407 50.3311 2.5124 49.1825 3.17253L37.515 9.89503C36.9448 10.2214 36.4451 10.6577 36.0449 11.1787C35.6447 11.6997 35.352 12.295 35.1837 12.93C35.018 13.4654 34.964 14.0291 35.025 14.5863C35.2425 16.1638 36.65 18.3863 38.3262 21.3225C40.0237 24.2888 41.94 27.6325 42.9425 28.3563C43.7899 28.9553 44.8022 29.2772 45.84 29.2775C46.7142 29.2778 47.5731 29.0476 48.33 28.61L60 21.8838C60.5805 21.5512 61.0878 21.1047 61.4914 20.5711C61.895 20.0375 62.1866 19.4279 62.3487 18.7788C62.661 17.4823 62.4557 16.1151 61.7762 14.9675Z"
+                        fill="#004382"
+                      />
+                    </svg>
+                    <h5 class="images-text">
+                      Лучшее телескопическое оборудование
+                    </h5>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div
+                    class="col-6 justify-content-center text-center images-card"
+                  >
+                    <svg
+                      width="65"
+                      height="65"
+                      viewBox="0 0 65 65"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_601_39)">
+                        <path
+                          d="M24.5 1.61197C24.8905 2.08642 25.1297 2.66706 25.1867 3.27886C25.2437 3.89067 25.116 4.50552 24.82 5.04397C22.5074 9.28987 21.2997 14.0491 21.308 18.884C21.308 34.968 34.42 47.992 50.58 47.992C52.688 47.992 54.74 47.772 56.712 47.352C57.3165 47.2211 57.9462 47.2711 58.5224 47.4959C59.0986 47.7207 59.5958 48.1103 59.952 48.616C60.328 49.1418 60.5196 49.7771 60.4972 50.423C60.4748 51.069 60.2395 51.6895 59.828 52.188C56.6907 56.0417 52.733 59.1468 48.2433 61.2767C43.7537 63.4067 38.8453 64.5079 33.876 64.5C15.436 64.5 0.5 49.644 0.5 31.34C0.5 17.564 8.956 5.74797 20.996 0.739973C21.5958 0.486501 22.2616 0.434477 22.8934 0.591716C23.5252 0.748955 24.089 1.10697 24.5 1.61197Z"
+                          fill="#B3B3B3"
+                        />
+                        <path
+                          d="M43.676 13.092C43.7334 12.9188 43.8439 12.768 43.9918 12.6612C44.1397 12.5543 44.3175 12.4968 44.5 12.4968C44.6825 12.4968 44.8603 12.5543 45.0082 12.6612C45.1562 12.768 45.2666 12.9188 45.324 13.092L46.872 17.74C47.564 19.812 49.188 21.436 51.26 22.128L55.908 23.676C56.0812 23.7334 56.232 23.8438 56.3388 23.9918C56.4456 24.1397 56.5032 24.3175 56.5032 24.5C56.5032 24.6825 56.4456 24.8603 56.3388 25.0082C56.232 25.1561 56.0812 25.2666 55.908 25.324L51.26 26.872C50.2381 27.2125 49.3095 27.7862 48.5479 28.5479C47.7863 29.3095 47.2125 30.2381 46.872 31.26L45.324 35.908C45.2666 36.0812 45.1562 36.232 45.0082 36.3388C44.8603 36.4456 44.6825 36.5031 44.5 36.5031C44.3175 36.5031 44.1397 36.4456 43.9918 36.3388C43.8439 36.232 43.7334 36.0812 43.676 35.908L42.128 31.26C41.7875 30.2381 41.2137 29.3095 40.4521 28.5479C39.6905 27.7862 38.7619 27.2125 37.74 26.872L33.092 25.324C32.9188 25.2666 32.768 25.1561 32.6612 25.0082C32.5544 24.8603 32.4969 24.6825 32.4969 24.5C32.4969 24.3175 32.5544 24.1397 32.6612 23.9918C32.768 23.8438 32.9188 23.7334 33.092 23.676L37.74 22.128C38.7619 21.7875 39.6905 21.2137 40.4521 20.4521C41.2137 19.6905 41.7875 18.7619 42.128 17.74L43.676 13.092ZM55.952 0.895992C55.9915 0.782097 56.0655 0.683336 56.1637 0.613438C56.2619 0.543541 56.3795 0.505981 56.5 0.505981C56.6206 0.505981 56.7381 0.543541 56.8363 0.613438C56.9345 0.683336 57.0085 0.782097 57.048 0.895992L58.08 3.99199C58.54 5.37599 59.624 6.45999 61.008 6.91999L64.104 7.95199C64.2179 7.99148 64.3167 8.06547 64.3866 8.16368C64.4565 8.2619 64.494 8.37945 64.494 8.49999C64.494 8.62054 64.4565 8.73809 64.3866 8.8363C64.3167 8.93451 64.2179 9.00851 64.104 9.04799L61.008 10.08C60.326 10.3069 59.7062 10.6897 59.1979 11.1979C58.6897 11.7062 58.3069 12.3259 58.08 13.008L57.048 16.104C57.0085 16.2179 56.9345 16.3166 56.8363 16.3865C56.7381 16.4564 56.6206 16.494 56.5 16.494C56.3795 16.494 56.2619 16.4564 56.1637 16.3865C56.0655 16.3166 55.9915 16.2179 55.952 16.104L54.92 13.008C54.6931 12.3259 54.3103 11.7062 53.8021 11.1979C53.2938 10.6897 52.6741 10.3069 51.992 10.08L48.896 9.04799C48.7821 9.00851 48.6833 8.93451 48.6135 8.8363C48.5436 8.73809 48.506 8.62054 48.506 8.49999C48.506 8.37945 48.5436 8.2619 48.6135 8.16368C48.6833 8.06547 48.7821 7.99148 48.896 7.95199L51.992 6.91999C53.376 6.45999 54.46 5.37599 54.92 3.99199L55.952 0.899992V0.895992Z"
+                          fill="#004382"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_601_39">
+                          <rect
+                            width="64"
+                            height="64"
+                            fill="white"
+                            transform="translate(0.5 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h5 class="images-text">Целимся на Луну и Марс</h5>
+                  </div>
+                  <div
+                    class="col-6 justify-content-center text-center images-card"
+                  >
+                    <svg
+                      width="65"
+                      height="65"
+                      viewBox="0 0 65 65"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_601_50)">
+                        <path
+                          d="M48.9 0.5H36.1V13.4888C40.6803 13.9922 45.0713 15.5939 48.9 18.1576V0.5ZM29.7 0.5H16.9V18.1576C20.7288 15.5939 25.1198 13.9922 29.7 13.4888V0.5Z"
+                          fill="#004382"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M32.9 64.5C38.8408 64.5 44.5384 62.14 48.7392 57.9391C52.94 53.7383 55.3 48.0408 55.3 42.1C55.3 36.1591 52.94 30.4616 48.7392 26.2608C44.5384 22.0599 38.8408 19.7 32.9 19.7C26.9592 19.7 21.2616 22.0599 17.0608 26.2608C12.86 30.4616 10.5 36.1591 10.5 42.1C10.5 48.0408 12.86 53.7383 17.0608 57.9391C21.2616 62.14 26.9592 64.5 32.9 64.5ZM28.98 37.2391L32.9 29.2999L36.82 37.2391L45.5816 38.5095L39.2424 44.6919L40.74 53.4183L32.9 49.2999L25.0632 53.4183L26.5608 44.6919L20.2216 38.5095L28.98 37.2391Z"
+                          fill="#B3B3B3"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_601_50">
+                          <rect
+                            width="64"
+                            height="64"
+                            fill="white"
+                            transform="translate(0.5 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h5 class="images-text">
+                      Золотая медаль по научным исследованиям
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-12 text-center images-img"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
