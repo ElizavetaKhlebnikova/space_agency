@@ -3,6 +3,7 @@ from .models import ImageForMainPageModel
 from django.utils.safestring import mark_safe
 from adminsortable2.admin import SortableAdminMixin
 
+
 @admin.register(ImageForMainPageModel)
 class ImageForMainPageModelAdmin(SortableAdminMixin, admin.ModelAdmin):
     list_display = ('name', 'image_preview')
