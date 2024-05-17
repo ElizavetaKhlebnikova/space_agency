@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'landing'
+    'easy_thumbnails',
+    'adminsortable2',
+    'filer',
+    'landing',
 ]
 
 MIDDLEWARE = [
@@ -75,12 +78,15 @@ WSGI_APPLICATION = 'space_agency.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        'NAME': 'space_db',
+        'USER': 'dbuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -121,7 +127,20 @@ STATICFILES_DIRS = (
     BASE_DIR / 'static',
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+THUMBNAIL_HIGH_RESOLUTION = True
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+FILER_CANONICAL_URL = 'sharing/'
