@@ -178,8 +178,9 @@ svg {
     overflow: hidden;
   }
   .images-img {
-    width: 340px;
-    height: 340px;
+    width: -webkit-fill-available;
+    aspect-ratio: 1 / 1;
+    height: unset;
   }
   .draggable {
     width: unset;
@@ -198,10 +199,10 @@ svg {
     font-size: 35px;
   }
   .agency-text {
-    font-size: 13px;
+    font-size: 16px;
   }
   .images-text {
-    font-size: 11px;
+    font-size: 14px;
   }
   .slider-nav-image.slick-slide {
     margin-left: 10px;
@@ -210,6 +211,7 @@ svg {
     width: 80px;
   }
   .slider-title {
+    font-size: 30px;
     margin-top: 60px;
     margin-bottom: 60px;
   }
