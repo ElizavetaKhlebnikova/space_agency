@@ -2,16 +2,22 @@ from django.contrib import admin
 from .models import ImageForMainPageModel
 from django.utils.safestring import mark_safe
 from adminsortable2.admin import SortableAdminMixin
+from easy_thumbnails.files import get_thumbnailer
+from django.utils.html import format_html
 
 
 @admin.register(ImageForMainPageModel)
 class ImageForMainPageModelAdmin(SortableAdminMixin, admin.ModelAdmin):
-    list_display = ('name', 'image_preview')
+    list_display = ('name', 'thumbnail')
 
-    @admin.display(description="предварительный просмотр изображения")
-    def image_preview(self, obj):
+    def thumbnail(self, obj):
         if obj.image:
-            return mark_safe('<img src="{}" width="100px" height="100px">'.format(obj.image.url))
-        return 'нет изображения'
+            thumbnail_url = get_thumbnailer(obj.image).get_thumbnail({
+                'size': (0, 100),
+                'crop': True,
+                'upscale': True,
+            }).url
+            return format_html('<img src="{}" alt="Thumbnail">', thumbnail_url)
+        return "No Image"
 
-    image_preview.allow_tags = True
+    thumbnail.short_description = "предварительный просмотр изображения"
