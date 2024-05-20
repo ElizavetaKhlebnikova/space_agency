@@ -9,6 +9,7 @@ class ImageForMainPageModel(models.Model):
         default=0,
         blank=False,
         null=False,
+        verbose_name=u"Порядок отображения"
     )
 
     class Meta:
