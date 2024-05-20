@@ -92,18 +92,10 @@ svg {
   color: white;
 }
 
-.slider-for-image img {
-  border-radius: 40px !important;
-  margin: 0 auto;
-}
-
 .slider-nav-image img {
   aspect-ratio: 1 / 1;
-}
-
-.slider {
-  position: relative;
-  padding: 0px 60px;
+  width: 165px;
+  object-fit: cover;
 }
 
 .slider-nav-image.slick-slide {
@@ -192,5 +184,28 @@ svg {
     font-size: 30px;
     margin-top: 60px;
     margin-bottom: 60px;
+  }
+}
+
+.slider-for img {
+  height: 420px;
+  width: 750px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 40px;
+}
+
+.slider-for.slick-initialized.slick-slider {
+  margin-bottom: 45px;
+}
+
+@media only screen and (max-width: 360px) {
+  .slider-for img {
+    height: 100%;
+    width: unset;
+    padding: 10px;
+  }
+  .photo-slider {
+    padding: 0;
   }
 }

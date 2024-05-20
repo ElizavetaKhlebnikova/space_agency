@@ -245,21 +245,18 @@
       </div>
 <!--slider-for-->
 
-      <div class="container">
-        <div class="sliders">
-          <div class="slider-for" style="margin-bottom: 45px">
+      <div class="container photo-slider">
+          <div class="slider-for">
             {% for obj in object_list %}
-            <div class="slider-for-image">
               <a
                 href="{{ obj.image.url }}"
                 data-lightbox="mygallery"
               >
-                <div class="image-for" style="border-radius: 40px; overflow: hidden;">
-                  <img src="{{ obj.image.url }}" style="max-height: 420px; object-fit: cover;" alt="Image description">
+                <div class="image-for">
+                  <img src="{{ obj.image.url }}" class="img-fluid" alt="main-space-img">
                 </div>
 
               </a>
-            </div>
             {% endfor %}
           </div>
 
@@ -269,7 +266,7 @@
             {% for obj in object_list %}
             <div class="slider-nav-image">
               <div class="image">
-                  <img src="{{ obj.image.url }}" style="height: 100%; object-fit: cover;" alt="Image description">
+                  <img src="{{ obj.image.url }}" class="img-fluid" alt="nav-space-img">
                 </div>
             </div>
             {% endfor %}
@@ -320,7 +317,6 @@
           </script>
         </div>
       </div>
-    </div>
     <script src="{% static 'lightbox/js/lightbox.js' %}"></script>
   </body>
 </html>
