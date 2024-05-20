@@ -93,17 +93,12 @@ svg {
 }
 
 .slider-for-image img {
-  max-width: 750px !important;
-  height: 420px !important;
   border-radius: 40px !important;
   margin: 0 auto;
 }
 
 .slider-nav-image img {
   aspect-ratio: 1 / 1;
-  border-radius: 40px;
-  /* margin-left: 15px;
-  margin-right: 15px; */
 }
 
 .slider {
@@ -136,27 +131,18 @@ svg {
   padding: 0px !important;
 }
 
-.image-for {
-  background-image: url(/static/img/space.jpg);
-  max-width: 750px !important;
-  height: 420px !important;
-  border-radius: 40px !important;
-  margin: 0 auto;
-  background-size: cover;
-  background-position: center;
-}
-
 .image {
   aspect-ratio: 1 / 1;
+  overflow: hidden;
   border-radius: 40px;
   width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
 }
 
 @media only screen and (max-width: 992px) {
   .image {
-    aspect-ratio: 1 / 1;
     border-radius: 20px;
   }
 }
@@ -166,16 +152,8 @@ svg {
     margin-bottom: 30px !important;
   }
 
-  .slider-for-image.slick-slide {
-    width: 42%;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 999;
-    opacity: 1;
+  .image-for {
     aspect-ratio: 1 / 1;
-    border-radius: 40px;
-    overflow: hidden;
   }
   .images-img {
     width: -webkit-fill-available;

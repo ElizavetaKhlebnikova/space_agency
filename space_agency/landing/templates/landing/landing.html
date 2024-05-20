@@ -243,7 +243,7 @@
           <h2 class="slider-title">Фотографии</h2>
         </div>
       </div>
-<!--      slider-for-->
+<!--slider-for-->
 
       <div class="container">
         <div class="sliders">
@@ -251,13 +251,13 @@
             {% for obj in object_list %}
             <div class="slider-for-image">
               <a
-                href="{{obj.image.url}}"
+                href="{{ obj.image.url }}"
                 data-lightbox="mygallery"
               >
-                <div
-                  class="image-for"
-                  style="background-image: url({{obj.image.url}})"
-                ></div>
+                <div class="image-for" style="border-radius: 40px; overflow: hidden;">
+                  <img src="{{ obj.image.url }}" style="max-height: 420px; object-fit: cover;" alt="Image description">
+                </div>
+
               </a>
             </div>
             {% endfor %}
@@ -268,10 +268,9 @@
           <div class="slider-nav">
             {% for obj in object_list %}
             <div class="slider-nav-image">
-              <div
-                class="image"
-                style="background-image: url({{obj.image.url}})"
-              ></div>
+              <div class="image">
+                  <img src="{{ obj.image.url }}" style="height: 100%; object-fit: cover;" alt="Image description">
+                </div>
             </div>
             {% endfor %}
           </div>
