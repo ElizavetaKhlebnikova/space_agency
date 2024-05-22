@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load thumbnail %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -253,9 +254,8 @@
                 data-lightbox="mygallery"
               >
                 <div class="image-for">
-                  <img src="{{ obj.image.url }}" class="img-fluid" alt="main-space-img">
+                  <img src="{{ obj.image|thumbnail_url:'my_preview_1' }}" class="img-fluid" alt="{{ obj.name }}">
                 </div>
-
               </a>
             {% endfor %}
           </div>
@@ -266,7 +266,7 @@
             {% for obj in object_list %}
             <div class="slider-nav-image">
               <div class="image">
-                  <img src="{{ obj.image.url }}" class="img-fluid" alt="nav-space-img">
+                  <img src="{{ obj.image|thumbnail_url:'my_preview_2' }}" class="img-fluid" alt="{{ obj.name }}">
                 </div>
             </div>
             {% endfor %}
@@ -303,6 +303,12 @@
               nextArrow:
                 "<img src='../../../static/img/arrow_next.png' class='next'>",
               responsive: [
+              {
+                  breakpoint: 1012,
+                  settings: {
+                    slidesToShow: 4,
+                  },
+                },
                 {
                   breakpoint: 576,
                   settings: {

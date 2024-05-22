@@ -135,6 +135,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#easy_thumbnails
 THUMBNAIL_HIGH_RESOLUTION = True
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
@@ -143,4 +144,11 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
 )
+THUMBNAIL_ALIASES = {
+    '': {
+        'my_preview_1': {'size': (750, 420), 'crop': 'smart'},
+        'my_preview_2': {'size': (165, 165), 'crop': 'smart'},
+    }
+}
+
 FILER_CANONICAL_URL = 'sharing/'
