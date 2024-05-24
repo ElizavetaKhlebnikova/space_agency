@@ -38,8 +38,16 @@ body {
   top: 20px;
 }
 
+.navbar-brand {
+  font-family: SpaceBold;
+}
+
 .about-us {
   margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.agency-info {
   margin-bottom: 90px;
 }
 
@@ -163,6 +171,7 @@ svg {
   .navbar-brand {
     font-size: 35px !important;
   }
+
   .agency-title {
     font-size: 35px;
   }
